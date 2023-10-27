@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import DogPics from "./DogPics";
 
 function App() {
   useEffect(() => {
@@ -6,8 +7,19 @@ function App() {
   });
 
   console.log("Component rendering");
+  function handleClick(e){
+    e.preventdefault();
+    return (
+      <DogPics />
+    )
 
-  return <button>Click Me</button>;
+  }
+
+  return (
+  <div>
+    <button onClick={handleClick}>Click Me</button>
+    </div>
+    )
 }
 
 export default App;
