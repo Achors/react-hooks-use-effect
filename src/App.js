@@ -8,7 +8,6 @@ function App() {
 
   console.log("Component rendering");
   function handleClick(e){
-    e.preventdefault();
     return (
       <DogPics />
     )
